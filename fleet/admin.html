@@ -70,7 +70,7 @@
         <button type="sumbit" onclick="addFleet()"> ADD fleet</button>
     </aside>
 
-    <main>
+    <main >
         <div id="main"></div>
     </main>
 </body>
@@ -92,7 +92,60 @@
     driverName,AvailabilityInput
    }
    fleets.push(fleet);
+   renderFleet(fleets);
+
    }
+   function renderFleet() {
+        let container = document.getElementById("main");
+        container.innerHTML = "";
+
+        fleets.forEach((fleet, index) => {
+            let card = document.createElement("div");
+            card.className = "card";
+
+            // Image
+            let img = document.createElement("img");
+            img.src = fleet.imgUrl;
+            card.appendChild(img);
+
+            // Registration Number
+            let reg = document.createElement("h3");
+            reg.textContent = fleet.regInput;
+            card.appendChild(reg);
+
+            // Vehicle Name
+            let vehicle = document.createElement("p");
+            vehicle.textContent = "Vehicle: " + fleet.vehicleName;
+            card.appendChild(vehicle);
+
+            // Driver Name
+            let driver = document.createElement("p");
+            driver.textContent = "Driver: " + fleet.driverName;
+            card.appendChild(driver);
+
+            // Availability
+            let avail = document.createElement("p");
+            avail.textContent = "Availability: " + fleet.AvailabilityInput;
+            card.appendChild(avail);
+
+            // Delete button
+            let deleteBtn = document.createElement("button");
+            deleteBtn.className = "deleteBtn";
+            deleteBtn.textContent = "Delete";
+
+            deleteBtn.addEventListener("click", function () {
+                fleets.splice(index, 1);
+                renderFleet();
+            });
+
+            card.appendChild(deleteBtn);
+
+            // Add card to container
+            container.appendChild(card);
+        });
+    }
+
+
     
 </script>
 </html>
