@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <input type="text" placeholder="enter your email id">
-    <input type="text" placeholder="enter the password">
-    <button type="submit">login</button>
+    <input id="emailInput" type="text" placeholder="enter your email id">
+    <input id="passwordInput" type="text" placeholder="enter the password">
+    <button  id="btn" type="submit">login</button>
 
 </body>
+<script>
+    const validEmail = "admin@gmail.com";
+    const validpassword = "admin1234";
+    const emailInput = document.getElementById("emailInput");
+    const passwordInput = document.getElementById("passwordInput");
+    
+     const button=document.querySelector("#btn");
+     button.addEventListener("click",()=>{
+
+        if (emailInput.value === validEmail && passwordInput.value === validpassword) {
+        // pop up login successfull
+        alert("Login success");
+        window.location.href="admin.html";
+    } else {
+        // login failure
+        alert("wrong  email or password.");
+    }
+     });
+
+
+
+</script>
+
 </html>
