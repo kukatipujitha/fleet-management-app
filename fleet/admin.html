@@ -1,20 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    #navigation {
+        width: 100%;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        align-items: center;
+        align-content: center;
+    }
+    #aside{
+        width: 100%;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        align-items: center;
+        align-content: center;
+    }
+</style>
+
 <body>
     <nav>
-        <div>
-            <select  id="category"> search category</select>
-            <option value="all">All</option>
-            <option value="Auto">All</option>
-            <option value="car">All</option>
-            <option value="truck">All</option>
-            <option value="bus">All</option>
+        <div id="navigation">
+            <select id="category">
+                <option value="">All</option>
+                <option value="Auto">auto</option>
+                <option value="car">car</option>
+                <option value="truck">truck</option>
+                <option value="bus">bus</option>
+            </select>
+
+            
+            <select id="filter">
+                <option value=""> All</option>
+                <option value="Available"> Available</option>
+                <option value="unavailable"> unavailable</option>
+            </select>
+            
+            <button type="submit">clear filter</button>
         </div>
     </nav>
+    <aside>
+        <div id="aside">
+            <input id=" regInput" type="text" placeholder="enter your Reg No of Vehicle ">
+            <select id="vehicleName">
+                <option value="Auto">Auto</option>
+                <option value="car">car</option>
+                <option value="truck">truck</option>
+                <option value="bus">bus</option>
+            </select>
+            <input id=" driverName" type="text" placeholder="enter drivername ">
+            <select id="AvailabilityInput">
+                <option value="Availability">Availability</option>
+                <option value="unavailability">unavailability</option>
+            </select>
+
+        </div>
+    </aside>
 </body>
+
 </html>
