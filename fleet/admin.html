@@ -67,25 +67,31 @@
                 <option value="unavailability">unavailability</option>
             </select>
         </div>
+        <button type="sumbit" onclick="addFleet()"> ADD fleet</button>
     </aside>
+
     <main>
         <div id="main"></div>
     </main>
 </body>
 <script>
     let fleets=[];
+    function addFleet(){
+
+    
     const regInput=document.getElementById("regInput").value;
     const vehicleName=document.getElementById("vehicleName").value;
     const driverName=document.getElementById("driverName").value;
     const AvailabilityInput=document.getElementById("AvailabilityInput").value;
-    const img_url=""
+    const imgUrl="https://coding-platform.s3.amazonaws.com/dev/lms/tickets/5e80fcb6-3f8e-480c-945b-30a5359eb40e/JNmYjkVr3WOjsrbu.png"
     
    let fleet={
-
+    imgUrl,
     regInput,
     vehicleName,
     driverName,AvailabilityInput
-
+   }
+   fleets.push(fleet);
    }
     
 </script>
