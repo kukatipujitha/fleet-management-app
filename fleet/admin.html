@@ -16,13 +16,14 @@
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
         text-align: center;
     }
-    #aside{
+
+    #aside {
         width: 40%;
         display: flex;
         background-color: white;
         display: flex;
         flex-direction: column;
-        
+
         background: white;
         border-radius: 10px;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
@@ -40,19 +41,19 @@
                 <option value="bus">bus</option>
             </select>
 
-            
+
             <select id="filter">
                 <option value=""> All</option>
                 <option value="Available"> Available</option>
                 <option value="unavailable"> unavailable</option>
             </select>
-            
+
             <button type="submit">clear filter</button>
         </div>
     </nav>
     <aside>
         <div id="aside">
-            <input id=" regInput" type="text" placeholder="enter your Reg No of Vehicle ">
+            <input id="regInput" type="text" placeholder="enter your Reg No of Vehicle ">
             <select id="vehicleName">
                 <option value="all">all</option>
                 <option value="Auto">Auto</option>
@@ -65,9 +66,27 @@
                 <option value="Availability">Availability</option>
                 <option value="unavailability">unavailability</option>
             </select>
-
         </div>
     </aside>
+    <main>
+        <div id="main"></div>
+    </main>
 </body>
+<script>
+    let fleets=[];
+    const regInput=document.getElementById("regInput").value;
+    const vehicleName=document.getElementById("vehicleName").value;
+    const driverName=document.getElementById("driverName").value;
+    const AvailabilityInput=document.getElementById("AvailabilityInput").value;
+    const img_url=""
+    
+   let fleet={
 
+    regInput,
+    vehicleName,
+    driverName,AvailabilityInput
+
+   }
+    
+</script>
 </html>
